@@ -28,7 +28,7 @@ private:
     double unmerged_weight = 0;
     double min = __DBL_MAX__;
     double max = __DBL_MIN__;
-    std::vector<centroid> nodes;
+    std::vector<centroid> centroids;
     static double weighted_average_sorted(double x1, double w1, double x2, double w2) {
         const double x = (x1 * w1 + x2 * w2) / (w1 + w2);
         return std::max(x1, std::min(x, x2));
@@ -45,7 +45,7 @@ public:
     void add(centroid cent);
     void add(double mean, double weight);
     void add(TDigestHistogram tDigestHistogram);
-    int getCount(){
+    int getCount() const{
         return merged_nodes+unmerged_nodes;
     }
     double getMin() const{
@@ -54,8 +54,8 @@ public:
     double getMax() const{
         return max;
     }
-    std::vector<centroid> getNodes(){
-        return nodes;
+    std::vector<centroid> getCentroids(){
+        return centroids;
     }
     void compress();
     double findQuantile(double q);
