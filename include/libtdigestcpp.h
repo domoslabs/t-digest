@@ -59,6 +59,9 @@ public:
     }
     void compress();
     double findQuantile(double q);
+    double getTotalWeight() const {
+        return unmerged_weight+merged_weight;
+    }
 };
 
 #endif //T_DIGEST_TDIGESTHISTOGRAM_H
