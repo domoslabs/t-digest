@@ -1,6 +1,6 @@
 #include <iostream>
 #include <cassert>
-#include "TDigestHistogram.h"
+#include "../include/libtdigestcpp.h"
 #include "tdigest.h"
 #define STREAM_SIZE 1000000
 

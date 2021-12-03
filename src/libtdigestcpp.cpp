@@ -2,7 +2,7 @@
 // Created by vladim0105 on 03.12.2021.
 //
 
-#include "TDigestHistogram.h"
+#include "../include/libtdigestcpp.h"
 
 TDigestHistogram::TDigestHistogram(int compression) {
     this->compression = compression;
